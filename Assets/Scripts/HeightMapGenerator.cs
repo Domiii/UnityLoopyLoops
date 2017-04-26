@@ -52,7 +52,8 @@ public class HeightMapGenerator : MonoBehaviour {
 	/// The smallest and biggest values of xFraction should ideally have a distance of 1, and not more than 1
 	/// Same goes for z.
 	/// Example: If you want to create terrain from real-world coordinates x_min = 1 to x_max = 11,
-	///          then let length = x_max - x_min = 10, and thus xFrac_min = x_min/length = 0.1 and xFrac_max = x_max/length = 1.1
+	///          then let length = x_max - x_min = 10, and thus:
+	///          xFraction_min = x_min/length = 0.1 and xFraction_max = x_max/length = 1.1
 	/// </summary>
 	float GenerateHeight (float xFraction, float zFraction) {
 		var h = 0.0f;
