@@ -48,9 +48,11 @@ public class HeightMapGenerator : MonoBehaviour {
 
 	/// <summary>
 	/// Generates the height at fractions of x and z.
-	/// "Normalized" in this case means: That the smallest and biggest values of x should ideally have a distance of 1, and not more than 1
+	/// For any generated patch:
+	/// The smallest and biggest values of xFraction should ideally have a distance of 1, and not more than 1
 	/// Same goes for z.
-	/// Example: If you want to create terrain from real-world coordinates x=1 to x=10, then you want to normalize in such a way that x=1 becomes 0 and 
+	/// Example: If you want to create terrain from real-world coordinates x_min = 1 to x_max = 11,
+	///          then let length = x_max - x_min = 10, and thus xFrac_min = x_min/length = 0.1 and xFrac_max = x_max/length = 1.1
 	/// </summary>
 	float GenerateHeight (float xFraction, float zFraction) {
 		var h = 0.0f;
