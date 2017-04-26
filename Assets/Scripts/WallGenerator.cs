@@ -7,14 +7,6 @@ public class WallGenerator : MonoBehaviour {
 	public float Gap = 0.1f;
 	public MeshRenderer brickPrefab;
 
-	// Use this for initialization
-	void Start () {
-		if (transform.childCount == 0) {
-			// create when starting, if no bricks have been added yet
-			Generate ();
-		}
-	}
-
 	public void Generate() {
 		if (brickPrefab == null) {
 			Debug.LogError ("Missing Brick Prefab. Make sure to prepare and assign a prefab for the bricks!");
